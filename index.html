@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="googlebot" content="noindex, nofollow, noarchive">
+  <title>鼎新 Workflow ERP 知識庫</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳到內容</a>
+  <header class="top">
+    <div class="top-bar">
+      <a class="brand" href="#/">
+        <span class="brand-mark" aria-hidden="true">庫</span>
+        <span>
+          <span class="brand-name">鼎新 Workflow ERP 知識庫</span>
+          <span class="brand-sub">內部離線查詢</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="主要">
+        <a href="#/" data-nav="home">搜尋</a>
+        <a href="#/topics" data-nav="topics">主題</a>
+        <a href="#/videos" data-nav="videos">影片區</a>
+        <a href="#/stats" data-nav="stats">統計</a>
+      </nav>
+    </div>
+    <form id="search-form" class="search-form" role="search">
+      <label class="sr-only" for="q">關鍵字</label>
+      <input id="q" name="q" type="search" autocomplete="off" enterkeyhint="search" placeholder="搜尋欄位、錯誤訊息、程式代號，例如庫別性質">
+      <button type="button" id="clear-q" class="ghost" hidden>清除</button>
+      <button type="submit">搜尋</button>
+    </form>
+  </header>
+  <div class="banner" role="status">
+    <strong>資料截止日：2026-11-21。</strong>
+    <span>此日期之後的鼎新文件尚未收錄。內容僅供公司內部使用，請勿外流。</span>
+  </div>
+  <div class="filters" id="filters">
+    <div class="type-group" role="group" aria-label="資料類型">
+      <button type="button" class="type-btn" data-ty="card" aria-pressed="true">知識卡片</button>
+      <button type="button" class="type-btn" data-ty="field" aria-pressed="true">欄位字典</button>
+      <button type="button" class="type-btn" data-ty="error" aria-pressed="true">錯誤訊息</button>
+      <button type="button" class="type-btn" data-ty="pdf" aria-pressed="true">PDF 全文</button>
+    </div>
+    <label class="ver-label">版本
+      <select id="ver"><option value="">全部版本</option></select>
+    </label>
+    <label class="ver-label">卡片型態
+      <select id="ctype">
+        <option value="">全部</option>
+        <option value="error">錯誤</option>
+        <option value="howto">步驟</option>
+        <option value="explain">說明</option>
+        <option value="other">其他</option>
+      </select>
+    </label>
+    <button type="button" id="topic-clear" class="ghost" hidden>清除主題</button>
+  </div>
+  <main id="main">
+    <p class="loading">正在準備知識庫…</p>
+  </main>
+  <footer class="foot">
+    <p>內容著作權屬鼎新數智股份有限公司（原鼎新電腦）。僅供公司內部查閱，禁止公開部署或再散布。</p>
+    <p>資料截止日 2026-11-21。本站不連線到鼎新，也不播放外部影片。</p>
+  </footer>
+  <noscript><p class="noscript">此知識庫需要 JavaScript。請用桌面版 Chrome 或 Edge 開啟。</p></noscript>
+  <script src="search.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
